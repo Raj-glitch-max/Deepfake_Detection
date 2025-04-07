@@ -32,7 +32,7 @@ import { createClient } from '@/utils/supabase/client'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
-  const [notes, setNotes] = useState<any[] | null>(null)
+  const [notes, setNotes] = useState(null)
   const supabase = createClient()
 
   useEffect(() => {
@@ -80,9 +80,9 @@ export default function FetchDataSteps() {
       <Step title="Query Supabase data from Next.js">
         <p>
           To create a Supabase client and query data from an Async Server
-          Component, create a new page.tsx file at{" "}
+          Component, create a new page.jsx file at{" "}
           <span className="px-2 py-1 rounded-md bg-foreground/20 text-foreground/80">
-            /app/notes/page.tsx
+            /app/notes/page.jsx
           </span>{" "}
           and add the following.
         </p>

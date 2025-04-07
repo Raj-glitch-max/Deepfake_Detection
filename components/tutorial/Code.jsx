@@ -35,7 +35,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-export default function Code({ code }: { code: string }) {
+export default function Code({ code }) {
   const [icon, setIcon] = useState(CopyIcon);
 
   const copy = async () => {
@@ -48,9 +48,9 @@ export default function Code({ code }: { code: string }) {
     <pre className="bg-foreground/5 rounded-md p-8 my-8 relative">
       <button
         onClick={copy}
-        className="absolute top-4 right-4  p-2 rounded-md bg-foreground/5 hover:bg-foreground/10"
+        className="absolute top-4 right-4 p-2 rounded-md bg-foreground/5 hover:bg-foreground/10"
       >
-        {icon}
+        {icon()}
       </button>
       <code>{code}</code>
     </pre>
